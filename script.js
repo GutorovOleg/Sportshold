@@ -96,8 +96,7 @@ window.onload = function(){
 	    	btnHide.style.display = 'block';
 	    }
 	 
-	    btnHide.mouseover = function() {
-	        console.log(5);
+	    btnHide.onmouseover = function() {
             TweenMax.to('#hide', 0.6, {x:10, repeat:1, yoyo:true});
 	    }
         hide.onclick = function() {
