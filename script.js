@@ -111,12 +111,10 @@ window.onload = function(){
 
     var images = document.querySelectorAll('.images');
     TweenMax.set(images, {opacity: 0,x: 900, y: -900});
-    var imageAnimate = false;
     var startAnime = document.getElementById('proposal').offsetTop - 900;
 
     document.addEventListener('scroll', function(){
-    	if(document.documentElement.scrollTop>startAnime){
-    		imageAnimate = true;
+    	if(document.documentElement.scrollTop>startAnime){		
     		animation();
     	}
     });
