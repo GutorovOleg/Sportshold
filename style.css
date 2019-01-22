@@ -274,6 +274,7 @@ h2{
 	border: 1px solid #8a8784;
 	padding-left:11%; 
 	padding-top: 7%;
+	cursor: pointer;
 }
 .item:hover{
 	transform: scale(1.05);
@@ -571,6 +572,9 @@ footer{
 	font-weight: 400;
 	font-size: 1.4rem;
 	line-height: 2.5;
+}
+.link1 a:hover{
+	color:#d56262;
 }
 h5{
 	font-size: 1.4rem;

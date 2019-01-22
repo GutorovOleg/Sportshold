@@ -91,14 +91,15 @@ window.onload = function(){
 	var formShow = document.getElementById('form_help');
 	    btn.onclick = function() {
 	    	TweenMax.to('#form_help', 0.6, {left:"-=365px"});
-	    	form_help.style.position = 'fixed';
 	    	btnOpen.style.display = 'none';
 	    	btnHide.style.display = 'block';
 	    }
 	 
-	    btnHide.onmouseover = function() {
-            TweenMax.to('#hide', 0.6, {x:10, repeat:1, yoyo:true});
-	    }
+	    // btnHide.onmouseover = function() {
+	 
+     //        TweenMax.to('#hide', 0.6, {x:10, repeat:10, yoyo:true});
+
+	    // }
         hide.onclick = function() {
 	    	TweenMax.to('#form_help', 0.6, {left:"+=365px"});
 	    	btnHide.style.display = 'none';
@@ -106,4 +107,20 @@ window.onload = function(){
 	    }
 	    
     
+
+
+    var images = document.querySelectorAll('.images');
+    TweenMax.set(images, {opacity: 0,x: 900, y: -900});
+    var imageAnimate = false;
+    var startAnime = document.getElementById('proposal').offsetTop - 900;
+
+    document.addEventListener('scroll', function(){
+    	if(document.documentElement.scrollTop>startAnime){
+    		imageAnimate = true;
+    		animation();
+    	}
+    });
+    function animation(){
+	  TweenMax.staggerTo(images,1,{opacity: 1, x:0, y:0},0.3);
+    }
 }
